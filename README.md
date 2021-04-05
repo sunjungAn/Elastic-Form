@@ -1,5 +1,5 @@
 # SMU_sight
-2021-1 Elastic Small Team Project
+2021-1 Elastic Develop Hackathon
 
 ## 프로젝트 주제
 
