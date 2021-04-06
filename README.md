@@ -2,9 +2,7 @@
 
 2021-1 Elastic Develop Hackathon
 
-## 프로젝트 설
-
-
+## 프로젝트 설명 
 
 ## 팀 구성원
 
