@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:weightSum="10"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4.5"
+        android:id = "@+id/action_bar"
+        android:weightSum="10"
+        android:orientation="horizontal"
+        android:background="#F5F4C9EF">
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="20dp"
+            android:id = "@+id/back_button"
+            android:background="@drawable/back_button"
+            android:layout_weight="2.8">
+        </ImageButton>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_weight="1.3"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/black"
+            android:id = "@+id/search_edit">
+        </EditText>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:id = "@+id/search_button"
+            android:background="@drawable/search_button"
+            android:layout_weight="3">
+        </ImageButton>
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id = "@+id/menu_button"
+            android:background="@drawable/menu_button"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="2.9">
+        </ImageButton>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id = "@+id/map_layout"
+        android:layout_weight="1">
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="4.5"
+        android:orientation="vertical">
+
+        <ImageButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:background="@drawable/readmore_button"
+            android:id = "@+id/readmore_button"
+            android:layout_gravity="center"
+            android:layout_marginLeft="180dp"
+            android:layout_marginRight="180dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp">
+
+        </ImageButton>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
