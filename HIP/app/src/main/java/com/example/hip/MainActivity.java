@@ -9,6 +9,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.Signature;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Base64;
 import android.util.Log;
@@ -17,11 +18,10 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
-//import net.daum.mf.map.api.MapView;
-
 import net.daum.mf.map.api.MapView;
 
 import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
 
 public class MainActivity extends AppCompatActivity {
     RecyclerView category_recyclerView, place_recyclerView;
@@ -33,6 +33,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        MapView mapView = new MapView(this);
+        ViewGroup mapViewContainer = (ViewGroup) findViewById(R.id.map_view);
+        mapViewContainer.addView(mapView);
 
         // category RecyclerView
         category_recyclerView = findViewById(R.id.category);
@@ -61,14 +65,10 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "아이템 선택됨 : " + item.getName(), Toast.LENGTH_LONG).show();
             }
         });
-        //MapView mapView = new MapView(this);mapView.setDaumMapApiKey("d044e1e3d70955e77748fdd3c858f4a4");
-        //RelativeLayout container = (RelativeLayout) findViewById(R.id.map_view);
-        //container.addView(mapView);
-
-
-
 
     }
+
+
 
 
 }
