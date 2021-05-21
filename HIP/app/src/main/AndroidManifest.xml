@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION">
     </uses-permission>
 
-    <meta-data android:name="com.kakao.sdk.AppKey" android:value= "afb09fcaad454262b707170e362225b2"/>
+    <meta-data android:name="com.kakao.sdk.AppKey" android:value= "d044e1e3d70955e77748fdd3c858f4a4"/>
 
 
     <application

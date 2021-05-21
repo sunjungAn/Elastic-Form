@@ -19,6 +19,8 @@ import android.widget.RelativeLayout;
 import android.widget.Toast;
 //import net.daum.mf.map.api.MapView;
 
+import net.daum.mf.map.api.MapView;
+
 import java.security.MessageDigest;
 
 public class MainActivity extends AppCompatActivity {
@@ -59,11 +61,9 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "아이템 선택됨 : " + item.getName(), Toast.LENGTH_LONG).show();
             }
         });
-
-        //MapView mapView = new MapView(MainActivity.this);
-
-        //RelativeLayout mapViewContainer = (RelativeLayout) findViewById(R.id.map_view);
-        //mapViewContainer.addView(mapView);
+        //MapView mapView = new MapView(this);mapView.setDaumMapApiKey("d044e1e3d70955e77748fdd3c858f4a4");
+        //RelativeLayout container = (RelativeLayout) findViewById(R.id.map_view);
+        //container.addView(mapView);
 
 
 
