@@ -1,0 +1,82 @@
+.ball {
+  position: absolute;
+  border-radius: 100%;
+  overflow: hidden;
+  opacity: 0.7;
+  z-index: -10;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui;
+  background: #FFFFFF;
+  color: black;
+  margin: 0;
+  z-index:10;
+  text-align: center;
+}
+
+form{
+  background-color: #fff;
+  max-width:65%;
+  z-index:15;
+  
+  margin:0 auto;
+  margin-top:5%;
+  margin-bottom:5%;
+  box-shadow:2px 5px 10px rgba(0,0,0,0.4);
+  border-radius:2px;
+  padding: 30px 20px;
+}
+.form-control{
+  text-align: left;
+  margin-bottom:20px;
+}
+.form-control label{
+  display: bolck;
+  margin-bottom:6px;
+}
+.form-control input{
+  padding :10px;
+  border-radius : 2px;
+  display: block;
+  font-size: 14px;
+  width: 100%;
+  font-family: inherit;
+  border: 1px solid #777;
+}
+
+.form-control input[type = "radio"]{
+  display:inline-block;
+  width: auto;
+  margin : 10px;
+}
+
+.start-btn{
+  margin: 30px;
+  background: #505DEB;
+  color: white;
+  font-family: system-ui;
+  width: 15%;
+  height: 50px;
+  border: 1px solid #777;
+  border-radius : 10px;
+  font-size: 18px;
+}
+
+.icon{
+    
+    width: 30px;
+    height: 30px;
+    stroke: white;
+    fill: transparent;
+    stroke-width: 1pt;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 400;
+    
+}
