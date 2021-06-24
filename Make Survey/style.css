@@ -11,29 +11,21 @@ html {
 html *,
 html *::before,
 html *::after {
-
     box-sizing: inherit;
-
 }
 
 body {
   font-family: system-ui;
   background: #DFB9EB;
   color: #AD6BB3;
-  margin: 0;
+  align-items: center;
+  justify-content: center;
   text-align: center;
 }
 
 p{
   color: #000000;
 }
-
-hr{
-  border: 0;
-  height : 10px;
-  box-shadow:0 10px 10px -10px #bbb insert;
-}
-
 
 form{
   background-color: #fff;
@@ -42,19 +34,37 @@ form{
   border-radius:7px;
   padding: 30px 20px;
 }
+html {
+
+    box-sizing: border-box;
+    --bgColorMenu : #AC1AEB;
+    --duration: .7s;    
+
+}
+
+html *,
+html *::before,
+html *::after {
+
+    box-sizing: inherit;
+
+}
 
 .menu{
-    vertical-align: middle;
+    margin: 0;
     display: flex;
-    max-width: 18%;
-    /* Works well with 100% width  */
+    /* Works well width 100% width  */
+    max-width:200%
+    width: 32.05em;
     font-size: 1.5em;
+    padding: 0 2.85em;
     position: relative;
     align-items: center;
     justify-content: center;
-    background-color: var(--bgColorItem);
+    background-color: var(--bgColorMenu);
     
 }
+
 
 .menu__item{
     
@@ -73,13 +83,15 @@ form{
     
 }
 
+
+
 .menu__item.active {
 
-    transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0 , 0);
 
 }
 
-.menu__item.active::before{ 
+.menu__item.active::before{
     
     transform: scale(1);
     background-color: var(--bgColorItem);
@@ -88,8 +100,8 @@ form{
 
 .icon{
     
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     stroke: white;
     fill: transparent;
     stroke-width: 1pt;
@@ -101,9 +113,7 @@ form{
 }
 
 .menu__item.active .icon {
-
     animation: strok 1.5s reverse;
-    
 }
 
 @keyframes strok {
@@ -115,17 +125,7 @@ form{
     }
 
 }
-.menu__border{
 
-    left: 0;
-    bottom: 99%;
-    position: absolute;
-    clip-path: url(#menu);
-    will-change: transform;
-    background-color: var(--bgColorMenu);
-    transition: transform var(--timeOut , var(--duration));
-    
-}
 .svg-container {
 
     width: 0;
@@ -137,4 +137,27 @@ form{
     .menu{
         font-size: .8em;
     }
+}
+
+.form-control{
+  text-align: left;
+  margin-bottom:20px;
+}
+.form-control label{
+  display: bolck;
+  margin-bottom:6px;
+}
+.form-control input{
+  padding :10px;
+  border-radius : 2px;
+  display: block;
+  font-size: 14px;
+  width: 100%;
+  font-family: inherit;
+  border: 1px #777;
+}
+
+hr{
+  border: 3px solid #AD6BB3;
+  border-radius: 5px;
 }
