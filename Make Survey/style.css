@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    --bgColorMenu : #1d1d27;
+    --duration: .7s;    
+}
+
+html *,
+html *::before,
+html *::after {
+
+    box-sizing: inherit;
+
+}
+
+body {
+  font-family: system-ui;
+  background: #DFB9EB;
+  color: #AD6BB3;
+  margin: 0;
+  text-align: center;
+}
+
+p{
+  color: #000000;
+}
+
+hr{
+  border: 0;
+  height : 10px;
+  box-shadow:0 10px 10px -10px #bbb insert;
+}
+
+
+form{
+  background-color: #fff;
+  max-width:70%;
+  margin: 0 auto;
+  border-radius:7px;
+  padding: 30px 20px;
+}
+
+.menu{
+    vertical-align: middle;
+    display: flex;
+    max-width: 18%;
+    /* Works well with 100% width  */
+    font-size: 1.5em;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgColorItem);
+    
+}
+
+.menu__item{
+    
+    all: unset;
+    flex-grow: 1;
+    z-index: 100;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    align-items: center;
+    will-change: transform;
+    justify-content: center;
+    padding: 10px 0 10px;
+    transition: transform var(--timeOut , var(--duration));
+    
+}
+
+.menu__item.active {
+
+    transform: translate3d(0, 0, 0);
+
+}
+
+.menu__item.active::before{ 
+    
+    transform: scale(1);
+    background-color: var(--bgColorItem);
+
+}
+
+.icon{
+    
+    width: 35px;
+    height: 35px;
+    stroke: white;
+    fill: transparent;
+    stroke-width: 1pt;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 400;
+    
+}
+
+.menu__item.active .icon {
+
+    animation: strok 1.5s reverse;
+    
+}
+
+@keyframes strok {
+
+    100% {
+
+        stroke-dashoffset: 400;
+
+    }
+
+}
+.menu__border{
+
+    left: 0;
+    bottom: 99%;
+    position: absolute;
+    clip-path: url(#menu);
+    will-change: transform;
+    background-color: var(--bgColorMenu);
+    transition: transform var(--timeOut , var(--duration));
+    
+}
+.svg-container {
+
+    width: 0;
+    height: 0;
+}
+
+
+@media screen and (max-width: 50em) {
+    .menu{
+        font-size: .8em;
+    }
+}
