@@ -1,0 +1,163 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+    box-sizing: border-box;
+    --bgColorMenu : #1d1d27;
+    --duration: .7s;    
+}
+
+html *,
+html *::before,
+html *::after {
+    box-sizing: inherit;
+}
+
+body {
+  font-family: system-ui;
+  background: #DFB9EB;
+  color: #AD6BB3;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+p{
+  color: #000000;
+}
+
+form{
+  background-color: #fff;
+  max-width:70%;
+  margin: 0 auto;
+  border-radius:7px;
+  padding: 30px 20px;
+}
+html {
+
+    box-sizing: border-box;
+    --bgColorMenu : #AC1AEB;
+    --duration: .7s;    
+
+}
+
+html *,
+html *::before,
+html *::after {
+
+    box-sizing: inherit;
+
+}
+
+.menu{
+    margin: 0;
+    display: flex;
+    /* Works well width 100% width  */
+    max-width:200%
+    width: 32.05em;
+    font-size: 1.5em;
+    padding: 0 2.85em;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bgColorMenu);
+    
+}
+
+
+.menu__item{
+    
+    all: unset;
+    flex-grow: 1;
+    z-index: 100;
+    display: flex;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    align-items: center;
+    will-change: transform;
+    justify-content: center;
+    padding: 10px 0 10px;
+    transition: transform var(--timeOut , var(--duration));
+    
+}
+
+
+
+.menu__item.active {
+
+    transform: translate3d(0, 0 , 0);
+
+}
+
+.menu__item.active::before{
+    
+    transform: scale(1);
+    background-color: var(--bgColorItem);
+
+}
+
+.icon{
+    
+    width: 30px;
+    height: 30px;
+    stroke: white;
+    fill: transparent;
+    stroke-width: 1pt;
+    stroke-miterlimit: 10;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 400;
+    
+}
+
+.menu__item.active .icon {
+    animation: strok 1.5s reverse;
+}
+
+@keyframes strok {
+
+    100% {
+
+        stroke-dashoffset: 400;
+
+    }
+
+}
+
+.svg-container {
+
+    width: 0;
+    height: 0;
+}
+
+
+@media screen and (max-width: 50em) {
+    .menu{
+        font-size: .8em;
+    }
+}
+
+.form-control{
+  text-align: left;
+  margin-bottom:20px;
+}
+.form-control label{
+  display: bolck;
+  margin-bottom:6px;
+}
+.form-control input{
+  padding :10px;
+  border-radius : 2px;
+  display: block;
+  font-size: 14px;
+  width: 100%;
+  font-family: inherit;
+  border: 1px #777;
+}
+
+hr{
+  border: 3px solid #AD6BB3;
+  border-radius: 5px;
+}
