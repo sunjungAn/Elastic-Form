@@ -42,7 +42,6 @@ balls.forEach((el, i, ra) => {
   );
 });
 
-
 function start_btn()
 {
     var name = document.getElementById("name").value
