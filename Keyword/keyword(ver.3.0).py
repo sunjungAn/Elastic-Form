@@ -41,6 +41,7 @@ krwordrank_cloud = WordCloud(
 krwordrank_cloud = krwordrank_cloud.generate_from_frequencies(keywords)
 fig = plt.figure(figsize=(10, 10))
 plt.imshow(krwordrank_cloud, interpolation="bilinear")
+plt.axis('off')
 plt.show()
 fig.savefig('./keyword2.png')
 
