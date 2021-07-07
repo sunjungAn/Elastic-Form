@@ -15,4 +15,4 @@ js = json.loads(js)
 data = pd.json_normalize(js['protocol']['chartdata']['item'])
 df = data['@data'].str.split('|',expand = True)
 df.columns = ['date','open','high','low','close','Volume']
-df.to_csv("GolfZone.csv")
+df.to_csv(stockCode)
